@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
 
 @class LoginViewController;
 
-@interface WanderlustAppDelegate : NSObject <UIApplicationDelegate>
+@interface WanderlustAppDelegate : NSObject <UIApplicationDelegate, FBSessionDelegate> {
+    Facebook *facebook;
+}
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet LoginViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIViewController *viewController;
+@property (nonatomic, retain) Facebook *facebook;
 
 @end

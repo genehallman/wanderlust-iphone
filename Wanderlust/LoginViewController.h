@@ -6,7 +6,7 @@
 //  Copyright 2011 5th Finger. All rights reserved.
 //
 
-
+#import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
 
