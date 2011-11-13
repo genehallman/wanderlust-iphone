@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B003B72B146F5FF7009277DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003B72A146F5FF7009277DE /* UIKit.framework */; };
+		B003B72D146F5FF7009277DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003B72C146F5FF7009277DE /* Foundation.framework */; };
+		B003B72F146F5FF7009277DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B003B72E146F5FF7009277DE /* CoreGraphics.framework */; };
+		B003B735146F5FF7009277DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B003B733146F5FF7009277DE /* InfoPlist.strings */; };
+		B003B737146F5FF7009277DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B736146F5FF7009277DE /* main.m */; };
+		B003B73B146F5FF7009277DE /* WanderlustAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */; };
+		B003B73E146F5FF7009277DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B73C146F5FF7009277DE /* MainWindow.xib */; };
+		B003B741146F5FF7009277DE /* WanderlustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B740146F5FF7009277DE /* WanderlustViewController.m */; };
+		B003B744146F5FF7009277DE /* WanderlustViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B742146F5FF7009277DE /* WanderlustViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B003B726146F5FF7009277DE /* Wanderlust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wanderlust.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B003B72A146F5FF7009277DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B003B72C146F5FF7009277DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B003B72E146F5FF7009277DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B003B732146F5FF7009277DE /* Wanderlust-Info.plist */ = {isa = PBXFileReference; path = "Wanderlust-Info.plist"; sourceTree = "<group>"; };
+		B003B734146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B003B736146F5FF7009277DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B003B738146F5FF7009277DE /* Wanderlust-Prefix.pch */ = {isa = PBXFileReference; path = "Wanderlust-Prefix.pch"; sourceTree = "<group>"; };
+		B003B739146F5FF7009277DE /* WanderlustAppDelegate.h */ = {isa = PBXFileReference; path = WanderlustAppDelegate.h; sourceTree = "<group>"; };
+		B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanderlustAppDelegate.m; sourceTree = "<group>"; };
+		B003B73D146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B003B73F146F5FF7009277DE /* WanderlustViewController.h */ = {isa = PBXFileReference; path = WanderlustViewController.h; sourceTree = "<group>"; };
+		B003B740146F5FF7009277DE /* WanderlustViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanderlustViewController.m; sourceTree = "<group>"; };
+		B003B743146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WanderlustViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B003B723146F5FF7009277DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B003B72B146F5FF7009277DE /* UIKit.framework in Frameworks */,
+				B003B72D146F5FF7009277DE /* Foundation.framework in Frameworks */,
+				B003B72F146F5FF7009277DE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B003B71B146F5FF7009277DE = {
+			isa = PBXGroup;
+			children = (
+				B003B730146F5FF7009277DE /* Wanderlust */,
+				B003B729146F5FF7009277DE /* Frameworks */,
+				B003B727146F5FF7009277DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B003B727146F5FF7009277DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B003B726146F5FF7009277DE /* Wanderlust.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B003B729146F5FF7009277DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B003B72A146F5FF7009277DE /* UIKit.framework */,
+				B003B72C146F5FF7009277DE /* Foundation.framework */,
+				B003B72E146F5FF7009277DE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B003B730146F5FF7009277DE /* Wanderlust */ = {
+			isa = PBXGroup;
+			children = (
+				B003B739146F5FF7009277DE /* WanderlustAppDelegate.h */,
+				B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */,
+				B003B73C146F5FF7009277DE /* MainWindow.xib */,
+				B003B73F146F5FF7009277DE /* WanderlustViewController.h */,
+				B003B740146F5FF7009277DE /* WanderlustViewController.m */,
+				B003B742146F5FF7009277DE /* WanderlustViewController.xib */,
+				B003B731146F5FF7009277DE /* Supporting Files */,
+			);
+			path = Wanderlust;
+			sourceTree = "<group>";
+		};
+		B003B731146F5FF7009277DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B003B732146F5FF7009277DE /* Wanderlust-Info.plist */,
+				B003B733146F5FF7009277DE /* InfoPlist.strings */,
+				B003B736146F5FF7009277DE /* main.m */,
+				B003B738146F5FF7009277DE /* Wanderlust-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B003B725146F5FF7009277DE /* Wanderlust */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B003B747146F5FF7009277DE /* Build configuration list for PBXNativeTarget "Wanderlust" */;
+			buildPhases = (
+				B003B722146F5FF7009277DE /* Sources */,
+				B003B723146F5FF7009277DE /* Frameworks */,
+				B003B724146F5FF7009277DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wanderlust;
+			productName = Wanderlust;
+			productReference = B003B726146F5FF7009277DE /* Wanderlust.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B003B71D146F5FF7009277DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "5th Finger";
+			};
+			buildConfigurationList = B003B720146F5FF7009277DE /* Build configuration list for PBXProject "Wanderlust" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B003B71B146F5FF7009277DE;
+			productRefGroup = B003B727146F5FF7009277DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B003B725146F5FF7009277DE /* Wanderlust */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B003B724146F5FF7009277DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B003B735146F5FF7009277DE /* InfoPlist.strings in Resources */,
+				B003B73E146F5FF7009277DE /* MainWindow.xib in Resources */,
+				B003B744146F5FF7009277DE /* WanderlustViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B003B722146F5FF7009277DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B003B737146F5FF7009277DE /* main.m in Sources */,
+				B003B73B146F5FF7009277DE /* WanderlustAppDelegate.m in Sources */,
+				B003B741146F5FF7009277DE /* WanderlustViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B003B733146F5FF7009277DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B003B734146F5FF7009277DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B003B73C146F5FF7009277DE /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B003B73D146F5FF7009277DE /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B003B742146F5FF7009277DE /* WanderlustViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B003B743146F5FF7009277DE /* en */,
+			);
+			name = WanderlustViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B003B745146F5FF7009277DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B003B746146F5FF7009277DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B003B748146F5FF7009277DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wanderlust/Wanderlust-Prefix.pch";
+				INFOPLIST_FILE = "Wanderlust/Wanderlust-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B003B749146F5FF7009277DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wanderlust/Wanderlust-Prefix.pch";
+				INFOPLIST_FILE = "Wanderlust/Wanderlust-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B003B720146F5FF7009277DE /* Build configuration list for PBXProject "Wanderlust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B003B745146F5FF7009277DE /* Debug */,
+				B003B746146F5FF7009277DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B003B747146F5FF7009277DE /* Build configuration list for PBXNativeTarget "Wanderlust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B003B748146F5FF7009277DE /* Debug */,
+				B003B749146F5FF7009277DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B003B71D146F5FF7009277DE /* Project object */;
+}
