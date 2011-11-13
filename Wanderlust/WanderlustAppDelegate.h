@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class WanderlustViewController;
+@class GridViewController;
 
 @interface WanderlustAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet WanderlustViewController *viewController;
+@property (nonatomic, retain) IBOutlet GridViewController *viewController;
 
 @end

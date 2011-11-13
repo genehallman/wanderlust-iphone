@@ -14,8 +14,13 @@
 		B003B737146F5FF7009277DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B736146F5FF7009277DE /* main.m */; };
 		B003B73B146F5FF7009277DE /* WanderlustAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */; };
 		B003B73E146F5FF7009277DE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B73C146F5FF7009277DE /* MainWindow.xib */; };
-		B003B741146F5FF7009277DE /* WanderlustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B740146F5FF7009277DE /* WanderlustViewController.m */; };
-		B003B744146F5FF7009277DE /* WanderlustViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B742146F5FF7009277DE /* WanderlustViewController.xib */; };
+		B003B741146F5FF7009277DE /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B740146F5FF7009277DE /* GridViewController.m */; };
+		B003B744146F5FF7009277DE /* GridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B742146F5FF7009277DE /* GridView.xib */; };
+		B003B74B146F6C36009277DE /* GridUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B74A146F6C36009277DE /* GridUserView.xib */; };
+		B003B74D146F6EF1009277DE /* LandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B74C146F6EF1009277DE /* LandingView.xib */; };
+		B003B751146F71B8009277DE /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B750146F71B8009277DE /* LoginView.xib */; };
+		B003B757146F781B009277DE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B756146F781B009277DE /* LoginViewController.m */; };
+		B003B75A146F7839009277DE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B759146F7839009277DE /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +28,23 @@
 		B003B72A146F5FF7009277DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B003B72C146F5FF7009277DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B003B72E146F5FF7009277DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B003B732146F5FF7009277DE /* Wanderlust-Info.plist */ = {isa = PBXFileReference; path = "Wanderlust-Info.plist"; sourceTree = "<group>"; };
+		B003B732146F5FF7009277DE /* Wanderlust-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wanderlust-Info.plist"; sourceTree = "<group>"; };
 		B003B734146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B003B736146F5FF7009277DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B003B738146F5FF7009277DE /* Wanderlust-Prefix.pch */ = {isa = PBXFileReference; path = "Wanderlust-Prefix.pch"; sourceTree = "<group>"; };
-		B003B739146F5FF7009277DE /* WanderlustAppDelegate.h */ = {isa = PBXFileReference; path = WanderlustAppDelegate.h; sourceTree = "<group>"; };
+		B003B738146F5FF7009277DE /* Wanderlust-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wanderlust-Prefix.pch"; sourceTree = "<group>"; };
+		B003B739146F5FF7009277DE /* WanderlustAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WanderlustAppDelegate.h; sourceTree = "<group>"; };
 		B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanderlustAppDelegate.m; sourceTree = "<group>"; };
 		B003B73D146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		B003B73F146F5FF7009277DE /* WanderlustViewController.h */ = {isa = PBXFileReference; path = WanderlustViewController.h; sourceTree = "<group>"; };
-		B003B740146F5FF7009277DE /* WanderlustViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WanderlustViewController.m; sourceTree = "<group>"; };
-		B003B743146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WanderlustViewController.xib; sourceTree = "<group>"; };
+		B003B73F146F5FF7009277DE /* GridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
+		B003B740146F5FF7009277DE /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		B003B743146F5FF7009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GridView.xib; sourceTree = "<group>"; };
+		B003B74A146F6C36009277DE /* GridUserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridUserView.xib; sourceTree = "<group>"; };
+		B003B74C146F6EF1009277DE /* LandingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingView.xib; sourceTree = "<group>"; };
+		B003B750146F71B8009277DE /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		B003B755146F781B009277DE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B003B756146F781B009277DE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B003B758146F7839009277DE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B003B759146F7839009277DE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +91,11 @@
 		B003B730146F5FF7009277DE /* Wanderlust */ = {
 			isa = PBXGroup;
 			children = (
+				B003B754146F76A7009277DE /* Models */,
+				B003B753146F7697009277DE /* Views */,
+				B003B752146F768B009277DE /* Controllers */,
 				B003B739146F5FF7009277DE /* WanderlustAppDelegate.h */,
 				B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */,
-				B003B73C146F5FF7009277DE /* MainWindow.xib */,
-				B003B73F146F5FF7009277DE /* WanderlustViewController.h */,
-				B003B740146F5FF7009277DE /* WanderlustViewController.m */,
-				B003B742146F5FF7009277DE /* WanderlustViewController.xib */,
 				B003B731146F5FF7009277DE /* Supporting Files */,
 			);
 			path = Wanderlust;
@@ -99,6 +110,38 @@
 				B003B738146F5FF7009277DE /* Wanderlust-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B003B752146F768B009277DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B003B73F146F5FF7009277DE /* GridViewController.h */,
+				B003B740146F5FF7009277DE /* GridViewController.m */,
+				B003B755146F781B009277DE /* LoginViewController.h */,
+				B003B756146F781B009277DE /* LoginViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B003B753146F7697009277DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B003B73C146F5FF7009277DE /* MainWindow.xib */,
+				B003B742146F5FF7009277DE /* GridView.xib */,
+				B003B74A146F6C36009277DE /* GridUserView.xib */,
+				B003B750146F71B8009277DE /* LoginView.xib */,
+				B003B74C146F6EF1009277DE /* LandingView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B003B754146F76A7009277DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B003B758146F7839009277DE /* User.h */,
+				B003B759146F7839009277DE /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +196,10 @@
 			files = (
 				B003B735146F5FF7009277DE /* InfoPlist.strings in Resources */,
 				B003B73E146F5FF7009277DE /* MainWindow.xib in Resources */,
-				B003B744146F5FF7009277DE /* WanderlustViewController.xib in Resources */,
+				B003B744146F5FF7009277DE /* GridView.xib in Resources */,
+				B003B74B146F6C36009277DE /* GridUserView.xib in Resources */,
+				B003B74D146F6EF1009277DE /* LandingView.xib in Resources */,
+				B003B751146F71B8009277DE /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +212,9 @@
 			files = (
 				B003B737146F5FF7009277DE /* main.m in Sources */,
 				B003B73B146F5FF7009277DE /* WanderlustAppDelegate.m in Sources */,
-				B003B741146F5FF7009277DE /* WanderlustViewController.m in Sources */,
+				B003B741146F5FF7009277DE /* GridViewController.m in Sources */,
+				B003B757146F781B009277DE /* LoginViewController.m in Sources */,
+				B003B75A146F7839009277DE /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +237,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		B003B742146F5FF7009277DE /* WanderlustViewController.xib */ = {
+		B003B742146F5FF7009277DE /* GridView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B003B743146F5FF7009277DE /* en */,
 			);
-			name = WanderlustViewController.xib;
+			name = GridView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
