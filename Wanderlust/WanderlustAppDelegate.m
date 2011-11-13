@@ -8,7 +8,7 @@
 
 #import "WanderlustAppDelegate.h"
 
-#import "GridViewController.h"
+#import "LoginViewController.h"
 
 @implementation WanderlustAppDelegate
 
