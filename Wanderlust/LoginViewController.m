@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "WanderlustAppDelegate.h"
 
 @implementation LoginViewController
 
@@ -41,4 +42,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)fbConnect:(id)sender {
+    [((WanderlustAppDelegate *)[[UIApplication sharedApplication] delegate]) login];
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "GridViewController.h"
+#import "WanderlustAppDelegate.h"
 
 @implementation GridViewController
 
@@ -20,13 +21,15 @@
 
 #pragma mark - View lifecycle
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
+    NSLog(@"view loaded");
+    app = ((WanderlustAppDelegate *)[[UIApplication sharedApplication] delegate]);
+    NSLog(@"%@", app);
+    [app.facebook requestWithGraphPath:@"me" andDelegate:self];
     [super viewDidLoad];
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -41,4 +44,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)doLogout:(id)sender {
+    [app logout];
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result {
+    NSLog(@"%@", result);
+}
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
 @end

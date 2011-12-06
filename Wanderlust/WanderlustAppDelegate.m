@@ -8,20 +8,19 @@
 
 #import "WanderlustAppDelegate.h"
 
+#import "GridViewController.h"
 #import "LoginViewController.h"
 
 @implementation WanderlustAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize loginViewController;
 @synthesize facebook;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
 
     facebook = [[Facebook alloc] initWithAppId:@"219219838149802" andDelegate:self];
     
@@ -31,15 +30,19 @@
         facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
     }
+    NSLog(@"facebook session check");
     if (![facebook isSessionValid]) {
-        [facebook authorize:nil];
+        [self showLogin];
     }
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [facebook handleOpenURL:url]; 
+    return [facebook handleOpenURL:url];
 }
 
 - (void)fbDidLogin {
@@ -48,6 +51,27 @@
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
     
+}
+
+- (void)fbDidLogout {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    
+}
+
+-(void)login {
+    [facebook authorize:nil];
+}
+
+-(void)logout {
+    [facebook logout:self];
+    [self showLogin];
+}
+
+-(void)showLogin {
+    [self.viewController.view addSubview:self.loginViewController.view];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

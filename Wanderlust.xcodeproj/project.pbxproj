@@ -20,7 +20,6 @@
 		B003B75A146F7839009277DE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B759146F7839009277DE /* User.m */; };
 		B003B761146F7E31009277DE /* GridUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B75B146F7E31009277DE /* GridUserView.xib */; };
 		B003B762146F7E31009277DE /* LandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B75D146F7E31009277DE /* LandingView.xib */; };
-		B003B763146F7E31009277DE /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003B75F146F7E31009277DE /* LoginView.xib */; };
 		B003B784146F83A1009277DE /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B769146F83A1009277DE /* Facebook.m */; };
 		B003B785146F83A1009277DE /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B003B76C146F83A1009277DE /* FBDialog.bundle */; };
 		B003B786146F83A1009277DE /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B76E146F83A1009277DE /* FBDialog.m */; };
@@ -33,6 +32,7 @@
 		B003B78D146F83A1009277DE /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B77E146F83A1009277DE /* SBJsonParser.m */; };
 		B003B78E146F83A1009277DE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B003B780146F83A1009277DE /* SBJsonWriter.m */; };
 		B003B796146F8C1F009277DE /* icon_fb-connect.png in Resources */ = {isa = PBXBuildFile; fileRef = B003B795146F8C1F009277DE /* icon_fb-connect.png */; };
+		B0225F13146FAB7D00B1CF0F /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0225F11146FAB7D00B1CF0F /* LoginView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +56,6 @@
 		B003B759146F7839009277DE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B003B75C146F7E31009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GridUserView.xib; sourceTree = "<group>"; };
 		B003B75E146F7E31009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LandingView.xib; sourceTree = "<group>"; };
-		B003B760146F7E31009277DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginView.xib; sourceTree = "<group>"; };
 		B003B768146F83A1009277DE /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		B003B769146F83A1009277DE /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
 		B003B76B146F83A1009277DE /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		B003B77F146F83A1009277DE /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		B003B780146F83A1009277DE /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		B003B795146F8C1F009277DE /* icon_fb-connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_fb-connect.png"; sourceTree = "<group>"; };
+		B0225F12146FAB7D00B1CF0F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,9 +164,9 @@
 		B003B753146F7697009277DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0225F11146FAB7D00B1CF0F /* LoginView.xib */,
 				B003B75B146F7E31009277DE /* GridUserView.xib */,
 				B003B75D146F7E31009277DE /* LandingView.xib */,
-				B003B75F146F7E31009277DE /* LoginView.xib */,
 				B003B73C146F5FF7009277DE /* MainWindow.xib */,
 				B003B742146F5FF7009277DE /* GridView.xib */,
 			);
@@ -284,9 +284,9 @@
 				B003B744146F5FF7009277DE /* GridView.xib in Resources */,
 				B003B761146F7E31009277DE /* GridUserView.xib in Resources */,
 				B003B762146F7E31009277DE /* LandingView.xib in Resources */,
-				B003B763146F7E31009277DE /* LoginView.xib in Resources */,
 				B003B785146F83A1009277DE /* FBDialog.bundle in Resources */,
 				B003B796146F8C1F009277DE /* icon_fb-connect.png in Resources */,
+				B0225F13146FAB7D00B1CF0F /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +358,10 @@
 			name = LandingView.xib;
 			sourceTree = "<group>";
 		};
-		B003B75F146F7E31009277DE /* LoginView.xib */ = {
+		B0225F11146FAB7D00B1CF0F /* LoginView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B003B760146F7E31009277DE /* en */,
+				B0225F12146FAB7D00B1CF0F /* en */,
 			);
 			name = LoginView.xib;
 			sourceTree = "<group>";
@@ -453,6 +453,7 @@
 				B003B749146F5FF7009277DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

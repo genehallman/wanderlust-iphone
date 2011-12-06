@@ -10,6 +10,11 @@
 
 @implementation User
 
+@synthesize name;
+@synthesize image_url;
+@synthesize compatibility;
+@synthesize languages;
+
 - (id)init
 {
     self = [super init];
@@ -18,6 +23,11 @@
     }
     
     return self;
+}
+
++ (NSArray*)loadUsers {
+    NSMutableArray *users = [NSMutableArray arrayWithCapacity:10];
+    return users;
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController {
+}
+
+- (IBAction)fbConnect:(id)sender;
 
 @end

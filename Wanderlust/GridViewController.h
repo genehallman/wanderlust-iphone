@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WanderlustAppDelegate.h"
 
-@interface GridViewController : UIViewController
+@interface GridViewController : UIViewController <FBRequestDelegate> {
+    WanderlustAppDelegate *app;
+}
+- (IBAction)doLogout:(id)sender;
+- (void)request:(FBRequest *)request didLoad:(id)result;
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)error;
 
 @end
