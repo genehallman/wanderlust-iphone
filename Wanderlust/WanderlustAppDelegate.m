@@ -10,6 +10,7 @@
 
 #import "GridViewController.h"
 #import "LoginViewController.h"
+#import <RestKit/RestKit.h>
 
 @implementation WanderlustAppDelegate
 
