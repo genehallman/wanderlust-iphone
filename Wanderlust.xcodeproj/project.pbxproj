@@ -32,7 +32,6 @@
 		B008DC1214B78BE300BC8C47 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B008DC0214B78BE300BC8C47 /* SBJsonBase.m */; };
 		B008DC1314B78BE300BC8C47 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B008DC0414B78BE300BC8C47 /* SBJsonParser.m */; };
 		B008DC1414B78BE300BC8C47 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B008DC0614B78BE300BC8C47 /* SBJsonWriter.m */; };
-=======
 		B02055B814B786F8004C9A59 /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B020559A14B78635004C9A59 /* libRestKitCoreData.a */; };
 		B02055B914B786F8004C9A59 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B020559614B78635004C9A59 /* libRestKitJSONParserJSONKit.a */; };
 		B02055BA14B786F8004C9A59 /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B020558A14B78635004C9A59 /* libRestKitNetwork.a */; };
@@ -181,7 +180,6 @@
 		B008DC0414B78BE300BC8C47 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		B008DC0514B78BE300BC8C47 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		B008DC0614B78BE300BC8C47 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-=======
 		B020557514B78634004C9A59 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		B02055BE14B78719004C9A59 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B02055BF14B78719004C9A59 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
