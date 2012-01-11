@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "WanderlustAppDelegate.h"
+#import "AuthenticationManager.h"
 
 @implementation LoginViewController
 
@@ -43,6 +43,6 @@
 }
 
 - (IBAction)fbConnect:(id)sender {
-    [((WanderlustAppDelegate *)[[UIApplication sharedApplication] delegate]) login];
+    [[AuthenticationManager sharedAuthenticationManager] doLoginWithFacebook];
 }
 @end

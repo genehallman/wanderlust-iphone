@@ -45,6 +45,7 @@
 		B02055C814B78719004C9A59 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02055C214B78719004C9A59 /* Security.framework */; };
 		B02055C914B78719004C9A59 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02055C314B78719004C9A59 /* SystemConfiguration.framework */; };
 		B0225F13146FAB7D00B1CF0F /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0225F11146FAB7D00B1CF0F /* LoginView.xib */; };
+		B093DB3514BC9E5800288827 /* AuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B093DB3414BC9E5800288827 /* AuthenticationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,8 @@
 		B02055C214B78719004C9A59 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B02055C314B78719004C9A59 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B0225F12146FAB7D00B1CF0F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginView.xib; sourceTree = "<group>"; };
+		B093DB3314BC9E5800288827 /* AuthenticationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationManager.h; sourceTree = "<group>"; };
+		B093DB3414BC9E5800288827 /* AuthenticationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +263,8 @@
 				B003B739146F5FF7009277DE /* WanderlustAppDelegate.h */,
 				B003B73A146F5FF7009277DE /* WanderlustAppDelegate.m */,
 				B003B731146F5FF7009277DE /* Supporting Files */,
+				B093DB3314BC9E5800288827 /* AuthenticationManager.h */,
+				B093DB3414BC9E5800288827 /* AuthenticationManager.m */,
 			);
 			path = Wanderlust;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				B008DC1214B78BE300BC8C47 /* SBJsonBase.m in Sources */,
 				B008DC1314B78BE300BC8C47 /* SBJsonParser.m in Sources */,
 				B008DC1414B78BE300BC8C47 /* SBJsonWriter.m in Sources */,
+				B093DB3514BC9E5800288827 /* AuthenticationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +671,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wanderlust/Wanderlust-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/RestKit/Build";
 				INFOPLIST_FILE = "Wanderlust/Wanderlust-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -676,6 +683,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wanderlust/Wanderlust-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/RestKit/Build";
 				INFOPLIST_FILE = "Wanderlust/Wanderlust-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

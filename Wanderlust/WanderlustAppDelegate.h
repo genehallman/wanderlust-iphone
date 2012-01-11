@@ -11,20 +11,15 @@
 
 @class LoginViewController;
 
-@interface WanderlustAppDelegate : NSObject <UIApplicationDelegate, FBSessionDelegate> {
+@interface WanderlustAppDelegate : NSObject <UIApplicationDelegate> {
     UIViewController *loginViewController;
-    Facebook *facebook;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @property (nonatomic, retain) IBOutlet UIViewController *viewController;
 @property (nonatomic, retain) IBOutlet UIViewController *loginViewController;
-@property (nonatomic, retain) Facebook *facebook;
 
--(void)login;
--(void)logout;
-
--(void)showLogin;
+- (void)showLogin;
+- (void)hideLogin;
 
 @end

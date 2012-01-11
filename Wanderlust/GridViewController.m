@@ -7,7 +7,7 @@
 //
 
 #import "GridViewController.h"
-#import "WanderlustAppDelegate.h"
+#import "AuthenticationManager.h"
 
 @implementation GridViewController
 
@@ -25,9 +25,7 @@
 - (void)viewDidLoad
 {
     NSLog(@"view loaded");
-    app = ((WanderlustAppDelegate *)[[UIApplication sharedApplication] delegate]);
-    NSLog(@"%@", app);
-    [app.facebook requestWithGraphPath:@"me" andDelegate:self];
+    //[app.facebook requestWithGraphPath:@"me" andDelegate:self];
     [super viewDidLoad];
 }
 
@@ -45,7 +43,7 @@
 }
 
 - (IBAction)doLogout:(id)sender {
-    [app logout];
+    [[AuthenticationManager sharedAuthenticationManager] doLogout];
 }
 
 - (void)request:(FBRequest *)request didLoad:(id)result {
