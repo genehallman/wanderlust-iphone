@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController {
+@interface LoginViewController : UIViewController <UITextFieldDelegate> {
 }
 
 - (IBAction)fbConnect:(id)sender;
+- (IBAction)doLogin:(id)sender;
+
+@property (nonatomic, retain) IBOutlet UITextField *email;
+@property (nonatomic, retain) IBOutlet UITextField *password;
 
 @end

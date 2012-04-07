@@ -9,17 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 
-@class LoginViewController;
-
-@interface WanderlustAppDelegate : NSObject <UIApplicationDelegate> {
-    UIViewController *loginViewController;
-}
+@interface WanderlustAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UIViewController *viewController;
-@property (nonatomic, retain) IBOutlet UIViewController *loginViewController;
 
-- (void)showLogin;
-- (void)hideLogin;
+- (void)configureRestKit;
 
 @end

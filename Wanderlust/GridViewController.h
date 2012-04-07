@@ -7,13 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 #import "WanderlustAppDelegate.h"
+#import "UserQuery.h"
+#import "MessageViewController.h"
 
-@interface GridViewController : UIViewController <FBRequestDelegate> {
-    WanderlustAppDelegate *app;
+@interface GridViewController : UIViewController <RKObjectLoaderDelegate, UITabBarDelegate> {
+    UserQuery *query;
+    MessageViewController *messageViewController;
+    NSMutableArray *userControllers;
 }
+
+@property (nonatomic, retain) IBOutlet UITabBar *tabBar;
+@property (nonatomic, retain) IBOutlet UIView *container;
+@property (nonatomic, retain) MessageViewController *messageViewController;
+
 - (IBAction)doLogout:(id)sender;
-- (void)request:(FBRequest *)request didLoad:(id)result;
-- (void)request:(FBRequest *)request didFailWithError:(NSError *)error;
+- (IBAction)doRefresh:(id)sender;
+- (void)refreshView;
 
 @end

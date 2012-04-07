@@ -19,6 +19,7 @@ static AuthenticationManager* sharedManager = nil;
 {
     if (sharedManager == nil) {
         sharedManager = [[super allocWithZone:NULL] init];
+        [sharedManager initialize];
     }
     return sharedManager;
 }
@@ -61,14 +62,53 @@ static AuthenticationManager* sharedManager = nil;
         facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
     }
+    
+    // setup login view controller and add subview to window
+    loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginView" bundle:[NSBundle mainBundle]];
+    CGRect frame = loginViewController.view.frame;
+    frame.origin.y = 480.0; // Move view down 100 pixels
+    loginViewController.view.frame = frame;
+    
+    UIWindow* window = [[[UIApplication sharedApplication] delegate] window];
+    [window addSubview:[loginViewController view]];
 }
 
 - (void)showLogin {
-    [(WanderlustAppDelegate*)[[UIApplication sharedApplication] delegate] showLogin];
+    [self showLogin:nil withTarget:nil];
+}
+
+- (void)showLogin:(SEL)callback withTarget:(id)target {
+    UIWindow* window = [[[UIApplication sharedApplication] delegate] window];
+    [window bringSubviewToFront:[loginViewController view]];
+
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.75];
+
+    CGRect frame = loginViewController.view.frame;
+    frame.origin.y = 20.0; // Move view down 100 pixels
+    loginViewController.view.frame = frame;
+
+    [UIView commitAnimations];
+    
+    loginTarget = target;
+    loginCallback = callback;
 }
 
 - (void)hideLogin {
-    [(WanderlustAppDelegate*)[[UIApplication sharedApplication] delegate] hideLogin];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.75];
+
+    CGRect frame = loginViewController.view.frame;
+    frame.origin.y = 480.0; // Move view down 100 pixels
+    loginViewController.view.frame = frame;
+
+    [UIView commitAnimations];
+    
+    if (loginCallback && loginTarget) {
+        [loginTarget performSelector:loginCallback];
+        loginTarget = nil;
+        loginCallback = nil;
+    }
 }
 
 - (Boolean)isLoggedIn {
@@ -96,7 +136,7 @@ static AuthenticationManager* sharedManager = nil;
         NSString* token = [response bodyAsString];
         NSLog(@"Login Succeeded: %@", token);
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:token forKey:@"ScirtoToken"];
+        [defaults setObject:token forKey:@"WanderlustToken"];
         [defaults synchronize];
         [self hideLogin];
     }
@@ -117,6 +157,18 @@ static AuthenticationManager* sharedManager = nil;
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
     
+    [facebook requestWithGraphPath:@"me" andDelegate:self];
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result
+{
+    NSLog(@"%@", result);
+    RKParams* params = [RKParams params];
+    [params setValue:[facebook accessToken] forParam:@"user_session[token]"];
+    [params setValue:@"1" forParam:@"user_session[user_id]"];
+    
+    // Send it for processing!
+    [[RKClient sharedClient] post:@"/user_session.json" params:params delegate:self];
 }
 
 - (void)fbDidLogout {

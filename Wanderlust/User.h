@@ -7,20 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
-@interface User : NSObject {
-    NSString *name;
-    NSString *image_url;
-    NSInteger *compatibility;
-    NSArray *languages;
-}
+@interface User : NSObject;
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *image_url;
-@property (nonatomic) NSInteger *compatibility;
-@property (nonatomic, retain) NSArray *languages;
-
-
-+ (NSArray*)loadUsers;
+@property (nonatomic) NSInteger userId;
+@property (nonatomic, retain) NSString *username;
+@property (nonatomic, retain) NSString *email;
+@property (nonatomic, retain) NSString *imageUrl;
+@property (nonatomic) NSInteger distance;
+@property (nonatomic, retain) NSString *languages;
+@property (nonatomic, retain) NSString *friendUsername;
+@property (nonatomic, retain) NSString *friendId;
+@property (nonatomic) NSInteger age;
+@property (nonatomic, retain) NSString *livedCountries;
+@property (nonatomic, retain) NSString *hometown;
+@property (nonatomic, retain) NSString *schools;
+@property (nonatomic, retain) NSString *jobs;
+@property (nonatomic, retain) NSString *story;
+@property (nonatomic, retain) NSString *wantTo;
 
 @end

@@ -10,24 +10,20 @@
 
 @implementation User
 
-@synthesize name;
-@synthesize image_url;
-@synthesize compatibility;
+@synthesize userId;
+@synthesize username;
+@synthesize email;
+@synthesize imageUrl;
+@synthesize distance;
 @synthesize languages;
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
-+ (NSArray*)loadUsers {
-    NSMutableArray *users = [NSMutableArray arrayWithCapacity:10];
-    return users;
-}
+@synthesize friendUsername;
+@synthesize friendId;
+@synthesize age;
+@synthesize livedCountries;
+@synthesize hometown;
+@synthesize schools;
+@synthesize jobs;
+@synthesize story;
+@synthesize wantTo;
 
 @end

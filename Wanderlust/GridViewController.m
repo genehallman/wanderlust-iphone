@@ -8,32 +8,30 @@
 
 #import "GridViewController.h"
 #import "AuthenticationManager.h"
+#import "User.h"
+#import "GridUserViewController.h"
 
 @implementation GridViewController
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
+@synthesize tabBar;
+@synthesize messageViewController;
+@synthesize container;
 
-#pragma mark - View lifecycle
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    NSLog(@"view loaded");
-    //[app.facebook requestWithGraphPath:@"me" andDelegate:self];
     [super viewDidLoad];
+    [tabBar setSelectedItem:[tabBar.items objectAtIndex:0]];
+    query = [[UserQuery alloc] init];
+    query.near = TRUE;
+    
+    messageViewController = [[MessageViewController alloc] initWithNibName:@"MessageView" bundle:[NSBundle mainBundle]];
+    
+    [self refreshView];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -46,10 +44,72 @@
     [[AuthenticationManager sharedAuthenticationManager] doLogout];
 }
 
-- (void)request:(FBRequest *)request didLoad:(id)result {
-    NSLog(@"%@", result);
+- (IBAction)doRefresh:(id)sender {
+    [self refreshView];
 }
-- (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
-    NSLog(@"%@", error);
+
+- (void)tabBar:(UITabBar *)localTabBar didSelectItem:(UITabBarItem *)item {
+    NSLog(@"tab bar clicked - %d", item.tag);
+    if (item.tag < 2) {
+        query.near = (item.tag == 0);
+        if (query.near) {
+            CGRect frame = container.frame;
+            frame.origin.y = 81;
+            frame.size.height = 335;
+            container.frame = frame;
+        } else {
+            CGRect frame = container.frame;
+            frame.origin.y = 49;
+            frame.size.height = 367;
+            container.frame = frame;            
+        }
+        [self refreshView];
+    } else {
+        [tabBar setSelectedItem:[[tabBar items] objectAtIndex:query.near ? 0 : 1]];
+        [self.navigationController pushViewController:messageViewController animated:YES];
+    }
 }
+
+- (void)refreshView {
+    
+    // check authentication
+    if (![[AuthenticationManager sharedAuthenticationManager] isLoggedIn])
+    {
+        [[AuthenticationManager sharedAuthenticationManager] showLogin:@selector(refreshView) withTarget:self];
+        return;
+    }
+
+    // remove all user controllers in the current view
+    while (userControllers.count > 0) {        
+        [((GridUserViewController*)[userControllers lastObject]).view removeFromSuperview];
+        [userControllers removeLastObject];
+    }
+    
+    // set up the query to send
+    [query setToken:[[AuthenticationManager sharedAuthenticationManager] getToken]];
+    [query setMinAge:20];
+    [query setMaxAge:30];
+    
+    NSString* url = [NSString stringWithFormat:@"/users.json?%@", [query toQueryString]];
+    
+    // send query
+    RKObjectMapping* userMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[User class]];
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:url objectMapping:userMapping delegate:self];
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
+    for (int i = 0; i < [objects count]; i++) {
+        GridUserViewController *userController = [[GridUserViewController alloc] initWithNibName:@"GridUserView" bundle:[NSBundle mainBundle]];
+        [userController becomeFirstResponder];
+        [userController setUser:(User*)[objects objectAtIndex:i]];
+        [userControllers addObject:userController];
+        [container addSubview:[userController view]];
+    }
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error {
+    NSLog(@"did fail");
+}
+
+
 @end
